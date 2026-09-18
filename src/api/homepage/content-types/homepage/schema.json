@@ -1,0 +1,125 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Text1": {
+      "type": "string"
+    },
+    "Text2": {
+      "type": "string"
+    },
+    "Text3": {
+      "type": "string"
+    },
+    "HeroImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "SectionText1": {
+      "type": "string"
+    },
+    "SectionText2": {
+      "type": "string"
+    },
+    "SectionText3": {
+      "type": "text"
+    },
+    "Section1CovidRefliefFundNumber": {
+      "type": "string"
+    },
+    "Section1CovidRefliefFundCaption": {
+      "type": "string"
+    },
+    "Section1SailNumber": {
+      "type": "string"
+    },
+    "Section1SailCaption": {
+      "type": "string"
+    },
+    "Section1MSMENumber": {
+      "type": "string"
+    },
+    "Section1MSMECaption": {
+      "type": "string"
+    },
+    "Section1BursaryNumber": {
+      "type": "string"
+    },
+    "Section1BursaryCaption": {
+      "type": "string"
+    },
+    "Section2Text1": {
+      "type": "string"
+    },
+    "Section2Text2": {
+      "type": "string"
+    },
+    "Section2FeaturedPostDate": {
+      "type": "string"
+    },
+    "Section2FeaturedPostTitle": {
+      "type": "string"
+    },
+    "Section2FeaturedPostDescription": {
+      "type": "text"
+    },
+    "Section2FeaturedPostRegisterLink": {
+      "type": "string"
+    },
+    "Section2FeaturedPostMoreLink": {
+      "type": "string"
+    },
+    "Section2FeaturedPostImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Section2ListPost1Link": {
+      "type": "string"
+    },
+    "Section2ListPost1Date": {
+      "type": "string"
+    },
+    "Section2ListPost1Title": {
+      "type": "string"
+    },
+    "Section2ListPost2Link": {
+      "type": "string"
+    },
+    "Section2ListPost2Date": {
+      "type": "string"
+    },
+    "Section2ListPost2Title": {
+      "type": "string"
+    },
+    "Section2ListPost3Link": {
+      "type": "string"
+    },
+    "Section2ListPost3Date": {
+      "type": "string"
+    },
+    "Section2ListPost3Title": {
+      "type": "string"
+    }
+  }
+}

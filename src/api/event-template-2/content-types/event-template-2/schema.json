@@ -1,0 +1,59 @@
+{
+  "kind": "singleType",
+  "collectionName": "event_template_2s",
+  "info": {
+    "singularName": "event-template-2",
+    "pluralName": "event-template-2s",
+    "displayName": "Event Template 2",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Text1": {
+      "type": "string"
+    },
+    "ShowEntryClosingDate": {
+      "type": "boolean"
+    },
+    "EntryClosingDate": {
+      "type": "datetime"
+    },
+    "HeroImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "HeroButton": {
+      "type": "string"
+    },
+    "InfoCardTitle": {
+      "type": "string"
+    },
+    "InfoCardImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "FormCode": {
+      "type": "text"
+    },
+    "InfoCardDescription": {
+      "type": "richtext"
+    }
+  }
+}

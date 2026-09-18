@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "msme_highlights",
+  "info": {
+    "singularName": "msme-highlight",
+    "pluralName": "msme-highlights",
+    "displayName": "Msme Highlight"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "VideoUrl": {
+      "type": "string"
+    },
+    "VideoSnapshot": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

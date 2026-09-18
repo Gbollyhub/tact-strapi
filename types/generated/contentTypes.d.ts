@@ -485,6 +485,960 @@ export interface PluginUsersPermissionsUser
   };
 }
 
+export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
+  collectionName: 'about_pages';
+  info: {
+    singularName: 'about-page';
+    pluralName: 'about-pages';
+    displayName: 'About Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    Text2: Schema.Attribute.String;
+    Text3: Schema.Attribute.Text;
+    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SectionImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    AboutWriteUp: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-page.about-page'
+    >;
+  };
+}
+
+export interface ApiAchievementAchievement extends Struct.CollectionTypeSchema {
+  collectionName: 'achievements';
+  info: {
+    singularName: 'achievement';
+    pluralName: 'achievements';
+    displayName: 'Achievement';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Figure: Schema.Attribute.String;
+    Description: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::achievement.achievement'
+    >;
+  };
+}
+
+export interface ApiBursaryBursary extends Struct.SingleTypeSchema {
+  collectionName: 'bursaries';
+  info: {
+    singularName: 'bursary';
+    pluralName: 'bursaries';
+    displayName: 'Bursary';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    Text2: Schema.Attribute.String;
+    Text3: Schema.Attribute.Text;
+    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SectionTitle: Schema.Attribute.String;
+    BursaryCardImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    BursaryCardTitle: Schema.Attribute.String;
+    BursaryCardDescription: Schema.Attribute.Text;
+    BursaryCardLink: Schema.Attribute.String;
+    SectionBody: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::bursary.bursary'
+    >;
+  };
+}
+
+export interface ApiBursaryHighlightBursaryHighlight
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'bursary_highlights';
+  info: {
+    singularName: 'bursary-highlight';
+    pluralName: 'bursary-highlights';
+    displayName: 'Bursary Highlight';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    VideoUrl: Schema.Attribute.String;
+    VideoSnapshot: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::bursary-highlight.bursary-highlight'
+    >;
+  };
+}
+
+export interface ApiCampaignMediaKitCampaignMediaKit
+  extends Struct.SingleTypeSchema {
+  collectionName: 'campaign_media_kits';
+  info: {
+    singularName: 'campaign-media-kit';
+    pluralName: 'campaign-media-kits';
+    displayName: 'Campaign Media Kit';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    Text2: Schema.Attribute.String;
+    DownloadLink: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::campaign-media-kit.campaign-media-kit'
+    >;
+  };
+}
+
+export interface ApiConstituentsMonthlyFinancialAssistanceConstituentsMonthlyFinancialAssistance
+  extends Struct.SingleTypeSchema {
+  collectionName: 'constituents_monthly_financial_assistances';
+  info: {
+    singularName: 'constituents-monthly-financial-assistance';
+    pluralName: 'constituents-monthly-financial-assistances';
+    displayName: 'Constituents Monthly Financial Assistance';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    Text2: Schema.Attribute.String;
+    Text3: Schema.Attribute.Text;
+    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SectionHeader: Schema.Attribute.String;
+    SectionBody: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::constituents-monthly-financial-assistance.constituents-monthly-financial-assistance'
+    >;
+  };
+}
+
+export interface ApiContactAddressContactAddress
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'contact_addresses';
+  info: {
+    singularName: 'contact-address';
+    pluralName: 'contact-addresses';
+    displayName: 'Contact Address';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Office: Schema.Attribute.String;
+    Address: Schema.Attribute.Text;
+    PhoneNumber: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-address.contact-address'
+    >;
+  };
+}
+
+export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
+  collectionName: 'contact_pages';
+  info: {
+    singularName: 'contact-page';
+    pluralName: 'contact-pages';
+    displayName: 'Contact Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    Text2: Schema.Attribute.String;
+    Text3: Schema.Attribute.Text;
+    FAQImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-page.contact-page'
+    >;
+  };
+}
+
+export interface ApiCovid19FinancialReliefFundCovid19FinancialReliefFund
+  extends Struct.SingleTypeSchema {
+  collectionName: 'covid_19_financial_relief_funds';
+  info: {
+    singularName: 'covid-19-financial-relief-fund';
+    pluralName: 'covid-19-financial-relief-funds';
+    displayName: 'Covid-19 Financial Relief Fund';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    Text2: Schema.Attribute.String;
+    Text3: Schema.Attribute.Text;
+    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SectionTitle: Schema.Attribute.String;
+    CardImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    CardTitle: Schema.Attribute.String;
+    CardDescription: Schema.Attribute.Text;
+    Cardlink: Schema.Attribute.String;
+    SectionBody: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::covid-19-financial-relief-fund.covid-19-financial-relief-fund'
+    >;
+  };
+}
+
+export interface ApiEventTemplate1EventTemplate1
+  extends Struct.SingleTypeSchema {
+  collectionName: 'event_template_1s';
+  info: {
+    singularName: 'event-template-1';
+    pluralName: 'event-template-1s';
+    displayName: 'Event Template 1';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    ShowEntryClosingDate: Schema.Attribute.Boolean;
+    EntryClosingDate: Schema.Attribute.DateTime;
+    HeroImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    InfoCardTitle: Schema.Attribute.String;
+    InfoCardDescription: Schema.Attribute.Text;
+    InfoCardImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    FormCode: Schema.Attribute.Text;
+    PartnersList: Schema.Attribute.Component<
+      'partners-list.partners-list',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::event-template-1.event-template-1'
+    >;
+  };
+}
+
+export interface ApiEventTemplate2EventTemplate2
+  extends Struct.SingleTypeSchema {
+  collectionName: 'event_template_2s';
+  info: {
+    singularName: 'event-template-2';
+    pluralName: 'event-template-2s';
+    displayName: 'Event Template 2';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    ShowEntryClosingDate: Schema.Attribute.Boolean;
+    EntryClosingDate: Schema.Attribute.DateTime;
+    HeroImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    HeroButton: Schema.Attribute.String;
+    InfoCardTitle: Schema.Attribute.String;
+    InfoCardImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    FormCode: Schema.Attribute.Text;
+    InfoCardDescription: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::event-template-2.event-template-2'
+    >;
+  };
+}
+
+export interface ApiFacilitationFacilitation
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'facilitations';
+  info: {
+    singularName: 'facilitation';
+    pluralName: 'facilitations';
+    displayName: 'Facilitation';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    PostDate: Schema.Attribute.DateTime;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Tag: Schema.Attribute.Enumeration<
+      [
+        'Education',
+        'Electrification',
+        'Water',
+        'Health',
+        'YouthSportsTechnology',
+        'Market',
+        'RoadConstructions',
+      ]
+    >;
+    Body: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::facilitation.facilitation'
+    >;
+  };
+}
+
+export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
+  collectionName: 'faqs';
+  info: {
+    singularName: 'faq';
+    pluralName: 'faqs';
+    displayName: 'Faq';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    Summary: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::faq.faq'>;
+  };
+}
+
+export interface ApiFooterFooter extends Struct.SingleTypeSchema {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Logo: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Summary: Schema.Attribute.Text & Schema.Attribute.Required;
+    EmailAddress: Schema.Attribute.String & Schema.Attribute.Required;
+    PhoneNumber: Schema.Attribute.String & Schema.Attribute.Required;
+    FootText: Schema.Attribute.String & Schema.Attribute.Required;
+    FacebookLink: Schema.Attribute.String & Schema.Attribute.Required;
+    TwitterLink: Schema.Attribute.String & Schema.Attribute.Required;
+    InstagramLink: Schema.Attribute.String & Schema.Attribute.Required;
+    YoutubeLink: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::footer.footer'>;
+  };
+}
+
+export interface ApiGalleryGallery extends Struct.CollectionTypeSchema {
+  collectionName: 'galleries';
+  info: {
+    singularName: 'gallery';
+    pluralName: 'galleries';
+    displayName: 'Gallery';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    PostDate: Schema.Attribute.DateTime;
+    Images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gallery.gallery'
+    >;
+  };
+}
+
+export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
+  collectionName: 'globals';
+  info: {
+    singularName: 'global';
+    pluralName: 'globals';
+    displayName: 'global';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    SiteLogo: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    SiteColor: Schema.Attribute.String & Schema.Attribute.Required;
+    SiteBannerBackground: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    AuthorCardImage: Schema.Attribute.Media<'files' | 'images'> &
+      Schema.Attribute.Required;
+    AuthorCardTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::global.global'>;
+  };
+}
+
+export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
+  collectionName: 'homepages';
+  info: {
+    singularName: 'homepage';
+    pluralName: 'homepages';
+    displayName: 'Homepage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    Text2: Schema.Attribute.String;
+    Text3: Schema.Attribute.String;
+    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SectionText1: Schema.Attribute.String;
+    SectionText2: Schema.Attribute.String;
+    SectionText3: Schema.Attribute.Text;
+    Section1CovidRefliefFundNumber: Schema.Attribute.String;
+    Section1CovidRefliefFundCaption: Schema.Attribute.String;
+    Section1SailNumber: Schema.Attribute.String;
+    Section1SailCaption: Schema.Attribute.String;
+    Section1MSMENumber: Schema.Attribute.String;
+    Section1MSMECaption: Schema.Attribute.String;
+    Section1BursaryNumber: Schema.Attribute.String;
+    Section1BursaryCaption: Schema.Attribute.String;
+    Section2Text1: Schema.Attribute.String;
+    Section2Text2: Schema.Attribute.String;
+    Section2FeaturedPostDate: Schema.Attribute.String;
+    Section2FeaturedPostTitle: Schema.Attribute.String;
+    Section2FeaturedPostDescription: Schema.Attribute.Text;
+    Section2FeaturedPostRegisterLink: Schema.Attribute.String;
+    Section2FeaturedPostMoreLink: Schema.Attribute.String;
+    Section2FeaturedPostImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    Section2ListPost1Link: Schema.Attribute.String;
+    Section2ListPost1Date: Schema.Attribute.String;
+    Section2ListPost1Title: Schema.Attribute.String;
+    Section2ListPost2Link: Schema.Attribute.String;
+    Section2ListPost2Date: Schema.Attribute.String;
+    Section2ListPost2Title: Schema.Attribute.String;
+    Section2ListPost3Link: Schema.Attribute.String;
+    Section2ListPost3Date: Schema.Attribute.String;
+    Section2ListPost3Title: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::homepage.homepage'
+    >;
+  };
+}
+
+export interface ApiLegislativeActivityLegislativeActivity
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'legislative_activities';
+  info: {
+    singularName: 'legislative-activity';
+    pluralName: 'legislative-activities';
+    displayName: 'Legislative Activity';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    HeroSummary: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    PostDate: Schema.Attribute.DateTime;
+    Tags: Schema.Attribute.Enumeration<['Bills', 'Motions', 'Petitions']>;
+    Body: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::legislative-activity.legislative-activity'
+    >;
+  };
+}
+
+export interface ApiMsmeMsme extends Struct.SingleTypeSchema {
+  collectionName: 'msmes';
+  info: {
+    singularName: 'msme';
+    pluralName: 'msmes';
+    displayName: 'MSME';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    Text2: Schema.Attribute.String;
+    Text3: Schema.Attribute.Text;
+    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SectionTitle: Schema.Attribute.String;
+    MSMECardImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    MSMECardTitle: Schema.Attribute.String;
+    MSMECardDescription: Schema.Attribute.Text;
+    MSMECardLink: Schema.Attribute.String;
+    SectionBody: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::msme.msme'>;
+  };
+}
+
+export interface ApiMsmeHighlightMsmeHighlight
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'msme_highlights';
+  info: {
+    singularName: 'msme-highlight';
+    pluralName: 'msme-highlights';
+    displayName: 'Msme Highlight';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    VideoUrl: Schema.Attribute.String;
+    VideoSnapshot: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::msme-highlight.msme-highlight'
+    >;
+  };
+}
+
+export interface ApiNeedAssessmentNeedAssessment
+  extends Struct.SingleTypeSchema {
+  collectionName: 'need_assessments';
+  info: {
+    singularName: 'need-assessment';
+    pluralName: 'need-assessments';
+    displayName: 'Need Assessment';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    Text2: Schema.Attribute.String;
+    Text3: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    SectionTitle: Schema.Attribute.String;
+    SectionBody: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::need-assessment.need-assessment'
+    >;
+  };
+}
+
+export interface ApiPartnerPartner extends Struct.CollectionTypeSchema {
+  collectionName: 'partners';
+  info: {
+    singularName: 'partner';
+    pluralName: 'partners';
+    displayName: 'Partner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PartnerUrl: Schema.Attribute.String;
+    PartnerLogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::partner.partner'
+    >;
+  };
+}
+
+export interface ApiPressPress extends Struct.CollectionTypeSchema {
+  collectionName: 'presses';
+  info: {
+    singularName: 'press';
+    pluralName: 'presses';
+    displayName: 'Press';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    PressDate: Schema.Attribute.DateTime;
+    Subtitle: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Body: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::press.press'>;
+  };
+}
+
+export interface ApiResourceResource extends Struct.CollectionTypeSchema {
+  collectionName: 'resources';
+  info: {
+    singularName: 'resource';
+    pluralName: 'resources';
+    displayName: 'Resource';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    URL: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::resource.resource'
+    >;
+  };
+}
+
+export interface ApiSailSail extends Struct.SingleTypeSchema {
+  collectionName: 'sails';
+  info: {
+    singularName: 'sail';
+    pluralName: 'sails';
+    displayName: 'SAIL';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text1: Schema.Attribute.String;
+    Text2: Schema.Attribute.String;
+    HeroLogo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    HeroVideoUrl: Schema.Attribute.String;
+    SectionTitle: Schema.Attribute.String;
+    SectionImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    PostSectionHeading1: Schema.Attribute.String;
+    PostSectionHeading2: Schema.Attribute.String;
+    PostSectionDescription: Schema.Attribute.Text;
+    SectionBody: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::sail.sail'>;
+  };
+}
+
+export interface ApiSailProgrammeSailProgramme
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'sail_programmes';
+  info: {
+    singularName: 'sail-programme';
+    pluralName: 'sail-programmes';
+    displayName: 'Sail Programme';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Description: Schema.Attribute.Text;
+    Url: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sail-programme.sail-programme'
+    >;
+  };
+}
+
+export interface ApiTactProgrammeTactProgramme
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'tact_programmes';
+  info: {
+    singularName: 'tact-programme';
+    pluralName: 'tact-programmes';
+    displayName: 'Tact Programme';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Url: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
+    Summary: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tact-programme.tact-programme'
+    >;
+  };
+}
+
+export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
+  collectionName: 'testimonials';
+  info: {
+    singularName: 'testimonial';
+    pluralName: 'testimonials';
+    displayName: 'Testimonial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Text: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::testimonial.testimonial'
+    >;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -860,6 +1814,34 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about-page.about-page': ApiAboutPageAboutPage;
+      'api::achievement.achievement': ApiAchievementAchievement;
+      'api::bursary.bursary': ApiBursaryBursary;
+      'api::bursary-highlight.bursary-highlight': ApiBursaryHighlightBursaryHighlight;
+      'api::campaign-media-kit.campaign-media-kit': ApiCampaignMediaKitCampaignMediaKit;
+      'api::constituents-monthly-financial-assistance.constituents-monthly-financial-assistance': ApiConstituentsMonthlyFinancialAssistanceConstituentsMonthlyFinancialAssistance;
+      'api::contact-address.contact-address': ApiContactAddressContactAddress;
+      'api::contact-page.contact-page': ApiContactPageContactPage;
+      'api::covid-19-financial-relief-fund.covid-19-financial-relief-fund': ApiCovid19FinancialReliefFundCovid19FinancialReliefFund;
+      'api::event-template-1.event-template-1': ApiEventTemplate1EventTemplate1;
+      'api::event-template-2.event-template-2': ApiEventTemplate2EventTemplate2;
+      'api::facilitation.facilitation': ApiFacilitationFacilitation;
+      'api::faq.faq': ApiFaqFaq;
+      'api::footer.footer': ApiFooterFooter;
+      'api::gallery.gallery': ApiGalleryGallery;
+      'api::global.global': ApiGlobalGlobal;
+      'api::homepage.homepage': ApiHomepageHomepage;
+      'api::legislative-activity.legislative-activity': ApiLegislativeActivityLegislativeActivity;
+      'api::msme.msme': ApiMsmeMsme;
+      'api::msme-highlight.msme-highlight': ApiMsmeHighlightMsmeHighlight;
+      'api::need-assessment.need-assessment': ApiNeedAssessmentNeedAssessment;
+      'api::partner.partner': ApiPartnerPartner;
+      'api::press.press': ApiPressPress;
+      'api::resource.resource': ApiResourceResource;
+      'api::sail.sail': ApiSailSail;
+      'api::sail-programme.sail-programme': ApiSailProgrammeSailProgramme;
+      'api::tact-programme.tact-programme': ApiTactProgrammeTactProgramme;
+      'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;

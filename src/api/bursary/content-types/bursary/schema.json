@@ -1,0 +1,62 @@
+{
+  "kind": "singleType",
+  "collectionName": "bursaries",
+  "info": {
+    "singularName": "bursary",
+    "pluralName": "bursaries",
+    "displayName": "Bursary",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Text1": {
+      "type": "string"
+    },
+    "Text2": {
+      "type": "string"
+    },
+    "Text3": {
+      "type": "text"
+    },
+    "HeroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SectionTitle": {
+      "type": "string"
+    },
+    "BursaryCardImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "BursaryCardTitle": {
+      "type": "string"
+    },
+    "BursaryCardDescription": {
+      "type": "text"
+    },
+    "BursaryCardLink": {
+      "type": "string"
+    },
+    "SectionBody": {
+      "type": "richtext"
+    }
+  }
+}

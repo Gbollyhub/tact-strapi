@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "facilitations",
+  "info": {
+    "singularName": "facilitation",
+    "pluralName": "facilitations",
+    "displayName": "Facilitation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "PostDate": {
+      "type": "datetime"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Tag": {
+      "type": "enumeration",
+      "enum": [
+        "Education",
+        "Electrification",
+        "Water",
+        "Health",
+        "YouthSportsTechnology",
+        "Market",
+        "RoadConstructions"
+      ]
+    },
+    "Body": {
+      "type": "richtext"
+    }
+  }
+}

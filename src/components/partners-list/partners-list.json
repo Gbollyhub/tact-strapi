@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_partners_list_partners_lists",
+  "info": {
+    "displayName": "PartnersList"
+  },
+  "options": {},
+  "attributes": {
+    "Logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

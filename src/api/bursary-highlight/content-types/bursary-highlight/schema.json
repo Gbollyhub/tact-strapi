@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bursary_highlights",
+  "info": {
+    "singularName": "bursary-highlight",
+    "pluralName": "bursary-highlights",
+    "displayName": "Bursary Highlight"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "VideoUrl": {
+      "type": "string"
+    },
+    "VideoSnapshot": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

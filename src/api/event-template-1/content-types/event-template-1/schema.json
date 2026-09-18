@@ -1,0 +1,61 @@
+{
+  "kind": "singleType",
+  "collectionName": "event_template_1s",
+  "info": {
+    "singularName": "event-template-1",
+    "pluralName": "event-template-1s",
+    "displayName": "Event Template 1",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Text1": {
+      "type": "string"
+    },
+    "ShowEntryClosingDate": {
+      "type": "boolean"
+    },
+    "EntryClosingDate": {
+      "type": "datetime"
+    },
+    "HeroImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "InfoCardTitle": {
+      "type": "string"
+    },
+    "InfoCardDescription": {
+      "type": "text"
+    },
+    "InfoCardImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "FormCode": {
+      "type": "text"
+    },
+    "PartnersList": {
+      "type": "component",
+      "repeatable": false,
+      "component": "partners-list.partners-list"
+    }
+  }
+}

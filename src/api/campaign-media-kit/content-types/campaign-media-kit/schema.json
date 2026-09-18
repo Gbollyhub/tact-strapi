@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "campaign_media_kits",
+  "info": {
+    "singularName": "campaign-media-kit",
+    "pluralName": "campaign-media-kits",
+    "displayName": "Campaign Media Kit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Text1": {
+      "type": "string"
+    },
+    "Text2": {
+      "type": "string"
+    },
+    "DownloadLink": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "singleType",
+  "collectionName": "sails",
+  "info": {
+    "singularName": "sail",
+    "pluralName": "sails",
+    "displayName": "SAIL",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Text1": {
+      "type": "string"
+    },
+    "Text2": {
+      "type": "string"
+    },
+    "HeroLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "HeroVideoUrl": {
+      "type": "string"
+    },
+    "SectionTitle": {
+      "type": "string"
+    },
+    "SectionImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "PostSectionHeading1": {
+      "type": "string"
+    },
+    "PostSectionHeading2": {
+      "type": "string"
+    },
+    "PostSectionDescription": {
+      "type": "text"
+    },
+    "SectionBody": {
+      "type": "richtext"
+    }
+  }
+}
